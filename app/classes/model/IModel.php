@@ -14,5 +14,8 @@ interface IModel
 {
     public function set($params);
     
+    public function get();
+
+
     public function exists();
 }
