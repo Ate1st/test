@@ -1,0 +1,7 @@
+{
+ "bloks_folder":"bin/views/default/bloks",
+ "index":"bin/views/default/index.php",
+ "index1":"bin/views/default/index1.php",
+ "css":"bin/views/default/css",
+ "js":"bin/views/default/js"
+ }
