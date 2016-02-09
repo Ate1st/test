@@ -13,9 +13,7 @@ class controller
     private static $params;
 
     public static function call($route, $params = null)
-    {
-        $start = microtime(true);
-        
+    {       
         self::$route = $route;
         self::$params = $params;
         
@@ -44,8 +42,6 @@ class controller
         }
 
         call_user_func_array(self::$route, self::$params);
-        
-        log::add(" controller_call  ->  \n", $start);
         
     }
     
