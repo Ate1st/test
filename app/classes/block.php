@@ -20,16 +20,12 @@ class block
 
     protected static function show()
     {
-        
-        
         if(self::$block_name == null)
         {
-            //var_dump('++block++', self::$block_name);
             return null;
         }
 
         ob_start();
-        //var_dump(self::$blocks[self::$block_name]['path'].self::$blocks[self::$block_name]['name']);
             if(file_exists(self::$blocks[self::$block_name]['path'].self::$blocks[self::$block_name]['name']))
             {
                 require self::$blocks[self::$block_name]['path'].self::$blocks[self::$block_name]['name'];   
@@ -42,16 +38,12 @@ class block
         $res = ob_get_contents();
         
         ob_end_clean();
-        
-        //echo $res;
-        
+
         return $res;
     }
     
     public static function getValues($name)
     {
-        //var_dump(self::$values);
-        
         return isset(self::$values[$name]) ? self::$values[$name] : FALSE;
     }
     
