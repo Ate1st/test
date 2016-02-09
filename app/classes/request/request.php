@@ -7,8 +7,6 @@ class request implements IRequest
     
     public static function init($config)
     {
-        $start = microtime(true);
-        
         $request = $_REQUEST; 
         if(isset($request['route']))
         {
@@ -19,8 +17,6 @@ class request implements IRequest
             self::$route = [$config['default_controller'], $config['default_action']];
         }
             self::$params = $request;   
-            
-        log::add(" request_init  ->  \n", $start);
     }
     
     public static function get_route()
