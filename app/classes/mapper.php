@@ -66,7 +66,7 @@ abstract class mapper
     
     public function set($params, $options = null)
     {
-        //var_dump($params);
+        var_dump($params);
         
         $last_id = 0;
         

@@ -83,4 +83,9 @@ class player_model extends model implements IModel
         
         return false;
     }
+    
+    public function get()
+    {
+        
+    }
 }

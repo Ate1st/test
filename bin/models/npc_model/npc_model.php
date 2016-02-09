@@ -40,4 +40,9 @@ class npc_model extends model implements IModel
     {
         
     }
+    
+    public function get()
+    {
+        
+    }
 }

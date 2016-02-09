@@ -14,7 +14,7 @@
 class player_mapper extends mapper
 {
     private $select = ['players.id', 'players.name', 
-        'players.password', 'players.mastery',
+        'players.password','players.avatar', 'players.mastery',
         'players.health', 'players.stamina', 
         'players.mana', 'players.level', 'players.status', 'players.date', 
         'players.time'];
@@ -42,7 +42,8 @@ class player_mapper extends mapper
         if($player->exists())
         {
             $this->get_query_builder()->update('players')->set([['name =' => ':name'], 
-                                                                ['password = ' => ':password'], 
+                                                                ['password = ' => ':password'],
+                                                                ['avatar = ' => ':avatar'],
                                                                 ['mastery = ' => ':mastery'],
                                                                 ['health =' => ':health'], 
                                                                 ['stamina =' => ':stamina'], 
@@ -55,6 +56,7 @@ class player_mapper extends mapper
             $this->set([':id' => $player->getPlayer()['id'],
                           ':name' => $player->getPlayer()['name'], 
                           ':password' => $player->getPlayer()['password'], 
+                          ':avatar' => $player->getPlayer()['avatar'], 
                           ':mastery' => $player->getPlayer()['mastery'], 
                           ':health' => $player->getPlayer()['health'], 
                           ':stamina' => $player->getPlayer()['stamina'],
@@ -67,13 +69,14 @@ class player_mapper extends mapper
         }
         else
         {
-            $this->get_query_builder()->insert('players', ['name', 'password', 'mastery', 'health', 'stamina', 'mana', 'level', 'status', 'date', 'time'])->
-              values([':name', ':password', ':mastery', ':health', ':stamina', ':mana', 'level', 'status', ':date', ':time']);
+            $this->get_query_builder()->insert('players', ['name', 'password', 'avatar', 'mastery', 'health', 'stamina', 'mana', 'level', 'status', 'date', 'time'])->
+              values([':name', ':password', ':avatar', ':mastery', ':health', ':stamina', ':mana', 'level', 'status', ':date', ':time']);
         
         //var_dump($this->get_query_builder());
         
             $id = $this->set([':name' => $player->getPlayer()['name'], 
-                          ':password' => $player->getPlayer()['password'], 
+                          ':password' => $player->getPlayer()['password'],
+                          ':avatar' => $player->getPlayer()['avatar'], 
                           ':mastery' => $player->getPlayer()['mastery'], 
                           ':health' => $player->getPlayer()['health'], 
                           ':stamina' => $player->getPlayer()['stamina'],
