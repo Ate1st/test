@@ -13,16 +13,16 @@ function getConfig()
         'app/classes/model/', 
         'app/classes/app_config/',
         'app/classes/request/',
+        'app/classes/tcpdf/',
         'bin/controllers/',
         'bin/models/', 
-        'bin/models/player_model/',
-        'bin/models/npc_model/',
+        //'bin/models/player_model/',
         'bin/modules/auth/', 
         'bin/modules/upload/',
         'bin/bloks/messages/',
         'bin/bloks/test_reg_block/',
         'bin/bloks/test_auth_block/',
-        'bin/bloks/player_block/'
+        'bin/bloks/phpexcel_block/'
         ];
     
     $result = [];

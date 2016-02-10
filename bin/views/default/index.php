@@ -11,13 +11,13 @@
     <title>Signin Template for Bootstrap</title>
 
     <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
-    <script src="http://www.game.dev/bin/views/default/js/bootstrap.min.js"></script>
+    <script src="/bin/views/default/js/bootstrap.min.js"></script>
 
     
-    <link rel="stylesheet" href="http://www.game.dev/bin/views/default/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://www.game.dev/bin/views/default/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/bin/views/default/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bin/views/default/css/bootstrap-theme.min.css">
     
-    <link rel="stylesheet" href="http://www.game.dev/bin/views/default/css/style.css">
+    <link rel="stylesheet" href="/bin/views/default/css/style.css">
     
     <script src="/bin/views/default/js/tinymce/js/tinymce/tinymce.min.js"></script>
     <script type="text/javascript">

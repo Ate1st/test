@@ -29,7 +29,7 @@ and open the template in the editor.
 }
 
 .footer{
-    background: url(http://www.beget.dev/bin/views/default/img/footer.jpg) ;
+    background-color: #d9f3f4;
     height: 200px;
 }
 
@@ -47,7 +47,7 @@ and open the template in the editor.
 
 .footer{
     height: 200px;
-    background-color: black;
+    background-color: #d9f3f4;
     margin: 0;
 }
 
