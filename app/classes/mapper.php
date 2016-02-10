@@ -66,7 +66,7 @@ abstract class mapper
     
     public function set($params, $options = null)
     {
-        var_dump($params);
+        //var_dump($params);
         
         $last_id = 0;
         
@@ -77,12 +77,16 @@ abstract class mapper
         $this->prepared = $this->pdo->prepare($this->query_builder->get_query(), $this->options);
         $this->pdo->beginTransaction();
         
-            if(!$this->prepared->execute($params))
+        var_dump($this->prepared);
+        
+            if(!$this->prepared)
             {
                 $this->pdo->rollBack();
                 messages::set_message('30', 'alert-danger');
                 return $last_id;
             }
+            
+            $this->prepared->execute($params);
             
             $last_id = $this->pdo->lastInsertId();
             
