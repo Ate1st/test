@@ -69,12 +69,17 @@ class phpexcel_block_class extends block
         $rendererLibraryPath = 'app/classes/' . $rendererLibrary;
         PHPExcel_Settings::setPdfRenderer('tcpdf', $rendererLibraryPath); 
 
-            $filename='_Reporte_Usuarios_front.pdf'; 
+        
+            $path = 'files/asdfg1_'.date('i').'_'.date('s').'.pdf';
             $objWriter = new PHPExcel_Writer_PDF($xls);
             $objWriter = PHPExcel_IOFactory::createWriter($xls, 'PDF'); 
             $objWriter->setSheetIndex(0);
-            $objWriter->save('files/asdfg.pdf');
+            $objWriter->save($path);
 
+            self::$values['path'] = $path;
+            //echo 
+        //controller::call('/main/get_pdf', ['params' => ['path' => 'files/asdfg1.pdf']]);    
+            
         return self::show();
     }
 }

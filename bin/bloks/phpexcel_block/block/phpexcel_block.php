@@ -1,8 +1,4 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<form method="post" action="/main/get_pdf">
+    <input type="hidden" id="path" name="path" value="<?php echo phpexcel_block_class::getValues('path')?>">
+    <input type="submit">
+</form>
